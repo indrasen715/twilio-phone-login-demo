@@ -1,0 +1,61 @@
+<h1 class="error">User Profile</h1>
+<!---728x90--->
+<div class="w3layouts-two-grids">
+    <!---728x90--->
+    <div class="mid-class">
+
+        <div class="img-right-side">
+            <h3 id="welcomeMessage">Welcome &nbsp;<span id="welcomeName"></span></h3>
+            <p>This demo will Leverage Twilio Rest API to Trigger Otp on phone no,this otp will be further used to
+                verify the phone no and redirect the user to dashboard. </p>
+            <img src="/images/b11.png" class="img-fluid" alt="">
+        </div>
+        <div class="txt-left-side">
+            <h2>User Profile</h2><br>
+            <i class="fa fa-user-circle-o" style="font-size: 100px;"></i><br><br>
+            <div id="spinner" class="spinner-grow text-danger" style="width: 7rem; height: 7rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <table class="user-table" style="width:100%">
+                <tr>
+                    <th>Name:</th>
+                    <td id="name"></td>
+                </tr>
+
+                <tr>
+                    <th>Email:</th>
+                    <td id="email"></td>
+                </tr>
+                <tr>
+                    <th>Phone:</th>
+                    <td id="phone"></td>
+                </tr>
+                <tr>
+                    <th>Phone Verified:</th>
+                    <td id="phoneVerified"></td>
+                </tr>
+
+                <tr>
+                    <th>User Id:</th>
+                    <td id="uid"></td>
+                </tr>
+                <tr>
+                    <th>Created At:</th>
+                    <td id="createdAt"></td>
+                </tr>
+            </table><br>
+            <div class="row">
+                <div class="col-md-6">
+                    <button onClick="generateModel(false)" class="btn btn-primary" type="submit">Update</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn btn-primary" onClick="logout()"type="submit">Logout</button>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+
+    </div>
+</div>
+
