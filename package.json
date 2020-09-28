@@ -1,7 +1,7 @@
 {
-  "name": "phone-login-demo",
+  "name": "twilio-auth-demo",
   "version": "1.0.0",
-  "description": "This demo will provide a functionality for login with Phone and Otp ,using this demo one can easily understand the basic concept of phone login and generating Jwt token after verification.The Otp  is triggered and verified by leveraging Twilio Verify Api.",
+  "description": "This demo will provide a functionality for login with Phone and Otp ,using this demo one can easily understand the basic concept of phone login and generating Jwt token after verification.The Otp is triggered and verified by leveraging Twilio Verify Api.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

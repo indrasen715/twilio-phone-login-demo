@@ -1,13 +1,17 @@
 
 const User = require('../model/User')
 const jwt = require('jsonwebtoken')
-const constant=require('../config/credentials')
+const constant = require('../config/credentials')
 const client = require('twilio')(constant.ACCOUNT_SID, constant.AUTH_TOKEN);
 
-//send verification token on provided phone no
+/**
+ *This function is used to Trigger Verification token using Twilio Verify Api
+ *
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
+ */
 var sendOtp = (req, res, next) => {
-
-
     client.verify.services(constant.SERVICE_ID)
         .verifications
         .create({ to: req.body.PhoneId, channel: 'sms' })
@@ -26,9 +30,15 @@ var sendOtp = (req, res, next) => {
 
             })
         });
-
-
 }
+
+/**
+ * This function is used to verify user verification token and issue a JWT Token
+ *
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
+ */
 var verifyOtp = (req, res, next) => {
     client.verify.services(constant.SERVICE_ID)
         .verificationChecks
@@ -40,7 +50,7 @@ var verifyOtp = (req, res, next) => {
                     .then(user => {
                         if (user.length >= 1) {
                             var token = generateAcceeToken(user[0]);
-                            res.cookie('access_token',token , { maxAge: 900000, httpOnly: true })
+                            res.cookie('access_token', token, { maxAge: 900000, httpOnly: true })
                             return res.status(200).json({
                                 access_token: token,
                                 IsAuthenticated: true,
@@ -55,7 +65,7 @@ var verifyOtp = (req, res, next) => {
                             user.save()
                                 .then(user => {
                                     var token = generateAcceeToken(user);
-                                    res.cookie('access_token',token , { maxAge: 900000, httpOnly: true })
+                                    res.cookie('access_token', token, { maxAge: 900000, httpOnly: true })
                                     return res.status(200).json({
                                         access_token: token,
                                         IsAuthenticated: true,
@@ -89,7 +99,11 @@ var verifyOtp = (req, res, next) => {
         });
 }
 
-
+/**
+ * This function is used to generate Jwt access token
+ * @param {*} user
+ * @return {*} 
+ */
 var generateAcceeToken = (user) => {
     const accessToken = jwt.sign({ PhoneId: user.PhoneId, UserId: user._id }, constant.JWT_KEY, { expiresIn: "1h" })
     return accessToken;

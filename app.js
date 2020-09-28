@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 app.use(bodyParser.json())
-//Otp login routes
+//phone login routes
 app.use('/',authMiddleware,viewRouter)
 //twilio authentication Api
 app.use('/api/twilio',twilioRouter)

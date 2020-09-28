@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $('#spinner').hide()
     $('#errorMsg').hide()
+    $('#spinner-login').hide()
 });
 $('#user-login').on('submit', function (e) {
     $('#spinner').show()
@@ -53,8 +54,6 @@ function generateModel(PhoneId, isError) {
                 btnClass: 'btn-orange',
                 action: function () {
                     var otp = this.$content.find('input#otp');
-
-                    var errorText = this.$content.find('.text-danger');
                     if (!otp.val()) {
                         $.alert({
                             content: "Please Enter Otp",
@@ -62,6 +61,7 @@ function generateModel(PhoneId, isError) {
                         });
                         return false;
                     } else {
+                        $('#spinner-login').show()
                         verifyOtp(otp.val(), PhoneId)
                     }
                 }
@@ -85,10 +85,11 @@ function verifyOtp(otp, PhoneId) {
         cache: false,
         success: function (data) {
             if (data.IsAuthenticated && data.access_token) {
+                $('#spinner-login').hide()
                 window.localStorage.setItem('access_token', data.access_token)
                 window.location.href = "/profile"
             } else {
-
+                $('#spinner-login').hide()
                 generateModel(PhoneId, true)
             }
         }
