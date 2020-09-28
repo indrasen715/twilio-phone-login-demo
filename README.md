@@ -3,7 +3,7 @@
 ## Overview
 This demo will provide a functionality for login with Phone and Otp ,using this demo one can easily understand the basic concept of phone login and generating Jwt token after verification.The Otp is triggered and verified by leveraging Twilio Verify Api.
 
-## Instalation
+## Installation
 
 - Step 1: Navigate to `credentials.js` under 
 `<project-root-directory>/src/config/` and add following constant value.
