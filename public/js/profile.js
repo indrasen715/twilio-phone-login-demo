@@ -5,16 +5,13 @@ $(document).ready(function () {
     $('#spinner').show()
     $('.user-table').hide()
     $('#welcomeMessage').hide()
-
-
-    console.log(accessToken)
+    $('#spinner-update').hide()
     if (accessToken != null) {
         getUserProfile(accessToken)
-    }else{
-        window.location.href='/logout'
+    } else {
+        window.location.href = '/logout'
     }
 });
-
 
 function getUserProfile(accessToken) {
     $.ajax({
@@ -76,11 +73,6 @@ function generateModel(isError) {
                         Email: this.$content.find('input#email').val(),
                         Name: this.$content.find('input#name').val()
                     }
-                    console.log(data)
-
-
-
-                    var errorText = this.$content.find('.text-danger');
                     if (!data.Email || !data.Name) {
                         $.alert({
                             content: "Please Enter Required Fields",
@@ -88,6 +80,7 @@ function generateModel(isError) {
                         });
                         return false;
                     } else {
+                        $('#spinner-update').show()
                         updateProfile(data)
                     }
                 }
@@ -110,11 +103,15 @@ function updateProfile(data) {
         data: data,
         cache: false,
         success: function (data) {
-            console.log(data)
             if (data.IsUpdated) {
-                window.location.reload();
-            } 
-            if(data.err) {
+                setTimeout(function () {
+                    $('#spinner-update').hide()
+                    window.location.reload();
+
+                }, 5000);
+            }
+            if (data.err) {
+                $('#spinner-update').hide()
                 generateModel(true)
             }
             if (data.IsAuthenticated == false) {
@@ -123,7 +120,7 @@ function updateProfile(data) {
         }
     })
 }
-function logout(){
+function logout() {
     window.localStorage.removeItem('access_token')
-    window.location.href='/logout'
+    window.location.href = '/logout'
 }

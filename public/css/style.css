@@ -1,8 +1,7 @@
 /*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
+Author: Indrasen
+Author URL: 
+
 --*/
 
 
@@ -307,8 +306,8 @@ body {
     background: #ffffff;
     min-height: 100vh;
 }
-.w3layouts-two-grids {
-    width: 82%;
+.section-two-grids {
+    width: 95%;
     margin: 0px auto;
 }
 .mid-class,.main-two-w3ls {
@@ -417,7 +416,7 @@ button[type=submit] {
     -ms-transition: 0.5s all;
     box-shadow: 0px 0px 8px 0px #60f574;
 }
-button[type=submit]:hover,a.for:hover,.w3layouts_more-buttn a:hover{opacity:0.8;}
+button[type=submit]:hover,a.for:hover,.phone-two-grids a:hover{opacity:0.8;}
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
      color:#b7b6b6;
 }
@@ -453,12 +452,12 @@ input.checked {
     text-align: left;
     box-sizing: border-box;
 }
-.w3layouts_more-buttn h3 {
+.phone-two-grids h3 {
     color: #a0a0a0;
     letter-spacing: 0px;
     font-weight: 800;
 }
-.w3layouts_more-buttn a {
+.phone-two-grids a {
     font-size: 13px;
     color: #e80000;
     font-weight: bold;
@@ -509,7 +508,7 @@ input.checked {
 .form-left-to-w3l span {
     font-size: 25px;
 }
-.w3layouts_more-buttn h3 {
+.phone-two-grids h3 {
     font-size: 15px;
 }
 .copyrigh-wthree {
@@ -543,7 +542,7 @@ input.checked {
 .form-left-to-w3l span {
     font-size: 23px;
 }
-.w3layouts_more-buttn h3 {
+.phone-two-grids h3 {
     font-size: 14px;
 }
 .copyrigh-wthree {
@@ -578,7 +577,7 @@ h1.error {
 .form-left-to-w3l span {
     font-size: 21px;
 }
-.w3layouts_more-buttn h3 {
+.phone-two-grids h3 {
     font-size: 13px;
 }
 .copyrigh-wthree p {
@@ -609,8 +608,8 @@ h1.error {
 .img-right-side, .txt-left-side {
     padding: 3em 3.5em 2.3em;
 }
-.w3layouts-two-grids {
-    width: 85%;
+.section-two-grids {
+    width: 97%;
 }
 button[type=submit] {
     padding: 17px 20px;
@@ -637,8 +636,8 @@ h1.error {
 .img-right-side, .txt-left-side {
     padding: 2.5em 3em 2.3em;
 }
-.w3layouts-two-grids {
-    width: 88%;
+.section-two-grids {
+    width: 95%;
 }
 .form-left-to-w3l span {
     font-size: 18px;
@@ -666,7 +665,7 @@ button[type=submit] {
 .form-left-to-w3l {
     margin: 0px 0px 26px;
 	}
-	.w3layouts-two-grids {
+	.section-two-grids {
     width: 92%;
 }
 .copyrigh-wthree {
@@ -689,10 +688,10 @@ h1.error {
 .remenber-me, a.for {
     font-size: 11px;
 }
-.w3layouts_more-buttn h3 {
+.phone-two-grids h3 {
     font-size: 12px;
 }
-.w3layouts_more-buttn a {
+.phone-two-grids a {
     font-size: 12px;
 	}
 }
@@ -700,8 +699,8 @@ h1.error {
 .mid-class {
     flex-direction: column;
 }
-.w3layouts-two-grids {
-    width: 51%;
+.section-two-grids {
+    width: 79%;
 }
 h1.error {
     padding-top: 47px;
@@ -741,8 +740,8 @@ button[type=submit] {
 }	
 }
 @media(max-width:800px){
-.w3layouts-two-grids {
-    width: 58%;
+.section-two-grids {
+    width: 78%;
 }
 .img-right-side, .txt-left-side {
     padding: 2em 2em 1.6em;
@@ -750,8 +749,8 @@ button[type=submit] {
 	
 }
 @media(max-width:768px){
-.w3layouts-two-grids {
-    width: 61%;
+.section-two-grids {
+    width: 78%;
 }
 button[type=submit] {
     font-size: 14px;
@@ -770,8 +769,8 @@ h1.error {
 }	
 }
 @media(max-width:736px){
-.w3layouts-two-grids {
-    width: 64%;
+.section-two-grids {
+    width: 74%;
 }
 .img-right-side p {
     margin-bottom: 31px;
@@ -781,15 +780,15 @@ h1.error {
 	}
 }
 @media(max-width:667px){
-.w3layouts-two-grids {
-    width: 69%;
+.section-two-grids {
+    width: 79%;
 }
 h1.error {
     padding-top: 42px;
 }	
 }
 @media(max-width:640px){
-.w3layouts-two-grids {
+.section-two-grids {
     width: 72%;
 }
 h1.error {
@@ -800,7 +799,7 @@ button[type=submit] {
 }
 }
 @media(max-width:600px){
-.w3layouts-two-grids {
+.section-two-grids {
     width: 78%;
 }	
 button[type=submit] {
@@ -809,7 +808,7 @@ button[type=submit] {
 }
 }
 @media(max-width:568px){
-.w3layouts-two-grids {
+.section-two-grids {
     width: 81%;
 }
 .img-right-side, .txt-left-side {
@@ -824,7 +823,7 @@ h1.error {
 font-size: 30px;
 padding-top: 38px;
 }	
-.w3layouts-two-grids {
+.section-two-grids {
     width: 94%;
 }
 .img-right-side h3, .txt-left-side h2 {
