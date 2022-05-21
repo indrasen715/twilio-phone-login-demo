@@ -25,3 +25,22 @@ npm start
 ``` 
 
 Now you can access you project on `http://localhost:3000`
+
+
+## Demo Screenshots
+
+### Login Page
+
+![Login Page](./public/images//login.png)
+
+
+### Profile Page
+
+![Login Page](./public/images//profile.png)
+
+### Update Profile
+
+![Login Page](./public/images//update-profile.png)
+
+
+
